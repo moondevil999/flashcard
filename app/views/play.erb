@@ -1,0 +1,14 @@
+<div>
+  <h1>Game START!</h1>
+
+
+  <form name='quiz' action='/answer' method='post'>
+  <% @cards.each do |c|%>
+    <%= c.question %><br>
+    <input type='text' name='<%=c.id%>' value='<%=c.answer%>'><br><br>
+
+    <%end%>
+    <input type='submit' value='Submit'><br><br>
+  </form>
+
+</div>

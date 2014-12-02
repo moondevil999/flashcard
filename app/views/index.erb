@@ -1,23 +1,34 @@
+<link rel="stylesheet" type="text/css" href="css/application.css">
+<body>
 <div class="container">
-  <h1>Welcome to Sinatra!</h1>
-  <p>Hello, world!</p>
+  <h1>Flashcard</h1>
+  <p>- login -</p>
+  <img id='ruby' src='ruby.png'>
 
   <table>
     <tr>
-      <th>File Description</th>
-      <th>File Location</th>
-    </tr>
-    <tr>
-      <td>This view file</td>
-      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The layout file</td>
-      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The current controller</td>
-      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
+    <form id='login' action='/check' method='post'>
+     <img id='mail_img' src='mail.png'>
+     <input id='e' type='text' name='user[username]'><br>
+     <img id='pass_img' src='lock.png'>
+      <input id='pass' type='password' name='user[password]'>
+      <input id='tick' type='image' src='tick.png' type='Submit'>
+    </form>
     </tr>
   </table>
+
+
+
+    <form id='reg_form' action='/' method='post'>
+      <div id='register'>register</div>
+      <input id='rname' type='text' name='user[name]' placeholder='name'><br>
+     <img id='rmail_img' src='mail.png'>
+     <input id='reg_e' type='text' name='user[username]'><br>
+     <img id='rpass_img' src='lock.png'>
+      <input id='rpass' type='password' name='user[password]'>
+      <input id='rtick' type='image' src='tick.png' type='Submit'>
+    </form>
+
+
 </div>
+</body>

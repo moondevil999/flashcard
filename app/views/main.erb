@@ -1,0 +1,37 @@
+<div >
+
+  <p>Welcome, <%= session[:xxx]%></p>
+
+  <h3>Choose a deck</h3>
+  <p>
+    <% @deck.each do |d| %>
+    <a href='/deck/<%= d.id%>'><%= d.name%></a>
+    <%end%>
+  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
